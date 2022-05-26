@@ -1,0 +1,1303 @@
+.
+├── bitbake
+│   ├── AUTHORS
+│   ├── bin
+│   │   ├── bitbake
+│   │   ├── bitbake-diffsigs
+│   │   ├── bitbake-dumpsig -> bitbake-diffsigs
+│   │   ├── bitbake-getvar
+│   │   ├── bitbake-hashclient
+│   │   ├── bitbake-hashserv
+│   │   ├── bitbake-layers
+│   │   ├── bitbake-prserv
+│   │   ├── bitbake-selftest
+│   │   ├── bitbake-server
+│   │   ├── bitbake-worker
+│   │   ├── git-make-shallow
+│   │   ├── toaster
+│   │   └── toaster-eventreplay
+│   ├── ChangeLog
+│   ├── contrib
+│   │   ├── autobuilderlog.json
+│   │   ├── bbdev.sh
+│   │   ├── bbparse-torture.py
+│   │   ├── dump_cache.py
+│   │   ├── hashserv
+│   │   ├── prserv
+│   │   ├── README
+│   │   └── vim
+│   ├── doc
+│   │   ├── bitbake.1
+│   │   ├── bitbake-user-manual
+│   │   ├── conf.py
+│   │   ├── COPYING.GPL
+│   │   ├── COPYING.MIT
+│   │   ├── genindex.rst
+│   │   ├── index.rst
+│   │   ├── Makefile
+│   │   ├── README
+│   │   ├── releases.rst
+│   │   ├── sphinx-static
+│   │   ├── template
+│   │   └── _templates
+│   ├── lib
+│   │   ├── bb
+│   │   ├── bblayers
+│   │   ├── bs4
+│   │   ├── codegen.py
+│   │   ├── hashserv
+│   │   ├── layerindexlib
+│   │   ├── ply
+│   │   ├── progressbar
+│   │   ├── prserv
+│   │   ├── __pycache__
+│   │   ├── pyinotify.py
+│   │   ├── simplediff
+│   │   └── toaster
+│   ├── LICENSE
+│   ├── LICENSE.GPL-2.0-only
+│   ├── LICENSE.MIT
+│   ├── README
+│   └── toaster-requirements.txt
+├── build
+│   ├── bitbake-cookerdaemon.log
+│   ├── cache
+│   │   ├── bb_codeparser.dat
+│   │   ├── bb_persist_data.sqlite3
+│   │   ├── bb_unihashes.dat
+│   │   ├── hashserv.db
+│   │   ├── local_file_checksum_cache.dat
+│   │   └── sanity_info
+│   ├── conf
+│   │   ├── bblayers.conf
+│   │   ├── local.conf
+│   │   └── templateconf.cfg
+│   ├── downloads
+│   │   ├── git2
+│   │   └── uninative
+│   ├── sstate-cache
+│   │   ├── 17
+│   │   ├── 35
+│   │   ├── 39
+│   │   ├── 69
+│   │   ├── a2
+│   │   ├── f2
+│   │   └── universal
+│   └── tmp
+│       ├── abi_version
+│       ├── buildstats
+│       ├── cache
+│       ├── hosttools
+│       ├── log
+│       ├── saved_tmpdir
+│       ├── sstate-control
+│       ├── stamps
+│       ├── sysroots-components
+│       ├── sysroots-uninative
+│       └── work
+├── contrib
+│   ├── artwork
+│   │   └── oe.svg
+│   └── git-hooks
+│       └── sendemail-validate.sample
+├── crul.html
+├── documentation
+│   ├── bitbake.rst
+│   ├── boilerplate.rst
+│   ├── brief-yoctoprojectqs
+│   │   ├── figures
+│   │   └── index.rst
+│   ├── bsp-guide
+│   │   ├── bsp.rst
+│   │   ├── figures
+│   │   └── index.rst
+│   ├── conf.py
+│   ├── dev-manual
+│   │   ├── common-tasks.rst
+│   │   ├── figures
+│   │   ├── index.rst
+│   │   ├── intro.rst
+│   │   ├── qemu.rst
+│   │   └── start.rst
+│   ├── figures
+│   │   └── yp-how-it-works-new-diagram.png
+│   ├── genindex.rst
+│   ├── index.rst
+│   ├── kernel-dev
+│   │   ├── advanced.rst
+│   │   ├── common.rst
+│   │   ├── concepts-appx.rst
+│   │   ├── faq.rst
+│   │   ├── figures
+│   │   ├── index.rst
+│   │   ├── intro.rst
+│   │   └── maint-appx.rst
+│   ├── Makefile
+│   ├── migration-guides
+│   │   ├── index.rst
+│   │   ├── migration-1.3.rst
+│   │   ├── migration-1.4.rst
+│   │   ├── migration-1.5.rst
+│   │   ├── migration-1.6.rst
+│   │   ├── migration-1.7.rst
+│   │   ├── migration-1.8.rst
+│   │   ├── migration-2.0.rst
+│   │   ├── migration-2.1.rst
+│   │   ├── migration-2.2.rst
+│   │   ├── migration-2.3.rst
+│   │   ├── migration-2.4.rst
+│   │   ├── migration-2.5.rst
+│   │   ├── migration-2.6.rst
+│   │   ├── migration-2.7.rst
+│   │   ├── migration-3.0.rst
+│   │   ├── migration-3.1.rst
+│   │   ├── migration-3.2.rst
+│   │   ├── migration-3.3.rst
+│   │   ├── migration-3.4.rst
+│   │   ├── migration-4.0.rst
+│   │   ├── migration-general.rst
+│   │   ├── release-3.4.rst
+│   │   ├── release-4.0.rst
+│   │   ├── release-notes-3.4.1.rst
+│   │   ├── release-notes-3.4.2.rst
+│   │   ├── release-notes-3.4.rst
+│   │   └── release-notes-4.0.rst
+│   ├── overview-manual
+│   │   ├── concepts.rst
+│   │   ├── development-environment.rst
+│   │   ├── figures
+│   │   ├── index.rst
+│   │   ├── intro.rst
+│   │   ├── svg
+│   │   └── yp-intro.rst
+│   ├── Pipfile
+│   ├── poky.yaml.in
+│   ├── profile-manual
+│   │   ├── arch.rst
+│   │   ├── examples.rst
+│   │   ├── figures
+│   │   ├── index.rst
+│   │   ├── intro.rst
+│   │   └── usage.rst
+│   ├── README
+│   ├── ref-manual
+│   │   ├── classes.rst
+│   │   ├── devtool-reference.rst
+│   │   ├── faq.rst
+│   │   ├── features.rst
+│   │   ├── figures
+│   │   ├── images.rst
+│   │   ├── index.rst
+│   │   ├── kickstart.rst
+│   │   ├── qa-checks.rst
+│   │   ├── release-process.rst
+│   │   ├── resources.rst
+│   │   ├── structure.rst
+│   │   ├── system-requirements.rst
+│   │   ├── tasks.rst
+│   │   ├── terms.rst
+│   │   ├── TODO
+│   │   ├── variables.rst
+│   │   └── varlocality.rst
+│   ├── releases.rst
+│   ├── sdk-manual
+│   │   ├── appendix-customizing.rst
+│   │   ├── appendix-customizing-standard.rst
+│   │   ├── appendix-obtain.rst
+│   │   ├── extensible.rst
+│   │   ├── figures
+│   │   ├── index.rst
+│   │   ├── intro.rst
+│   │   ├── using.rst
+│   │   └── working-projects.rst
+│   ├── set_versions.py
+│   ├── sphinx
+│   │   └── yocto-vars.py
+│   ├── sphinx-static
+│   │   ├── switchers.js.in
+│   │   ├── theme_overrides.css
+│   │   └── YoctoProject_Logo_RGB.jpg
+│   ├── standards.md
+│   ├── template
+│   │   ├── draft.png
+│   │   ├── ohand-color.svg
+│   │   ├── poky-ref-manual.png
+│   │   ├── poky.svg
+│   │   ├── template.svg
+│   │   ├── VeraMoBd.ttf
+│   │   ├── VeraMono.ttf
+│   │   ├── Vera.ttf
+│   │   └── yocto-project-qs.png
+│   ├── _templates
+│   │   ├── breadcrumbs.html
+│   │   ├── footer.html
+│   │   └── layout.html
+│   ├── test-manual
+│   │   ├── figures
+│   │   ├── index.rst
+│   │   ├── intro.rst
+│   │   ├── reproducible-builds.rst
+│   │   ├── test-process.rst
+│   │   ├── understand-autobuilder.rst
+│   │   └── yocto-project-compatible.rst
+│   ├── toaster-manual
+│   │   ├── figures
+│   │   ├── index.rst
+│   │   ├── intro.rst
+│   │   ├── reference.rst
+│   │   ├── setup-and-use.rst
+│   │   └── start.rst
+│   ├── tools
+│   │   └── update-documentation-conf
+│   ├── transitioning-to-a-custom-environment.rst
+│   └── what-i-wish-id-known.rst
+├── filetree1.tree
+├── filetree5.tree
+├── filetree_all.tree
+├── filetree.tree
+├── LICENSE
+├── LICENSE.GPL-2.0-only
+├── LICENSE.MIT
+├── MAINTAINERS.md
+├── Makefile
+├── MEMORIAM
+├── meta
+│   ├── classes
+│   │   ├── allarch.bbclass
+│   │   ├── archiver.bbclass
+│   │   ├── autotools.bbclass
+│   │   ├── autotools-brokensep.bbclass
+│   │   ├── baremetal-image.bbclass
+│   │   ├── base.bbclass
+│   │   ├── bash-completion.bbclass
+│   │   ├── binconfig.bbclass
+│   │   ├── binconfig-disabled.bbclass
+│   │   ├── bin_package.bbclass
+│   │   ├── buildhistory.bbclass
+│   │   ├── buildstats.bbclass
+│   │   ├── buildstats-summary.bbclass
+│   │   ├── cargo.bbclass
+│   │   ├── cargo_common.bbclass
+│   │   ├── ccache.bbclass
+│   │   ├── ccmake.bbclass
+│   │   ├── chrpath.bbclass
+│   │   ├── cmake.bbclass
+│   │   ├── cml1.bbclass
+│   │   ├── compress_doc.bbclass
+│   │   ├── copyleft_compliance.bbclass
+│   │   ├── copyleft_filter.bbclass
+│   │   ├── core-image.bbclass
+│   │   ├── cpan-base.bbclass
+│   │   ├── cpan.bbclass
+│   │   ├── cpan_build.bbclass
+│   │   ├── create-spdx.bbclass
+│   │   ├── cross.bbclass
+│   │   ├── cross-canadian.bbclass
+│   │   ├── crosssdk.bbclass
+│   │   ├── cve-check.bbclass
+│   │   ├── debian.bbclass
+│   │   ├── deploy.bbclass
+│   │   ├── devicetree.bbclass
+│   │   ├── devshell.bbclass
+│   │   ├── devtool-source.bbclass
+│   │   ├── devupstream.bbclass
+│   │   ├── distro_features_check.bbclass
+│   │   ├── distrooverrides.bbclass
+│   │   ├── dos2unix.bbclass
+│   │   ├── externalsrc.bbclass
+│   │   ├── extrausers.bbclass
+│   │   ├── features_check.bbclass
+│   │   ├── fontcache.bbclass
+│   │   ├── fs-uuid.bbclass
+│   │   ├── gconf.bbclass
+│   │   ├── gettext.bbclass
+│   │   ├── gi-docgen.bbclass
+│   │   ├── gio-module-cache.bbclass
+│   │   ├── glide.bbclass
+│   │   ├── gnomebase.bbclass
+│   │   ├── goarch.bbclass
+│   │   ├── go.bbclass
+│   │   ├── gobject-introspection.bbclass
+│   │   ├── gobject-introspection-data.bbclass
+│   │   ├── go-mod.bbclass
+│   │   ├── go-ptest.bbclass
+│   │   ├── grub-efi.bbclass
+│   │   ├── grub-efi-cfg.bbclass
+│   │   ├── gsettings.bbclass
+│   │   ├── gtk-doc.bbclass
+│   │   ├── gtk-icon-cache.bbclass
+│   │   ├── gtk-immodules-cache.bbclass
+│   │   ├── icecc.bbclass
+│   │   ├── image-artifact-names.bbclass
+│   │   ├── image.bbclass
+│   │   ├── image-buildinfo.bbclass
+│   │   ├── image-combined-dbg.bbclass
+│   │   ├── image-container.bbclass
+│   │   ├── image-live.bbclass
+│   │   ├── image-postinst-intercepts.bbclass
+│   │   ├── image_types.bbclass
+│   │   ├── image_types_wic.bbclass
+│   │   ├── insane.bbclass
+│   │   ├── kernel-arch.bbclass
+│   │   ├── kernel-artifact-names.bbclass
+│   │   ├── kernel.bbclass
+│   │   ├── kernel-devicetree.bbclass
+│   │   ├── kernel-fitimage.bbclass
+│   │   ├── kernel-grub.bbclass
+│   │   ├── kernel-module-split.bbclass
+│   │   ├── kernelsrc.bbclass
+│   │   ├── kernel-uboot.bbclass
+│   │   ├── kernel-uimage.bbclass
+│   │   ├── kernel-yocto.bbclass
+│   │   ├── libc-package.bbclass
+│   │   ├── lib_package.bbclass
+│   │   ├── license.bbclass
+│   │   ├── license_image.bbclass
+│   │   ├── linux-dummy.bbclass
+│   │   ├── linux-kernel-base.bbclass
+│   │   ├── linuxloader.bbclass
+│   │   ├── live-vm-common.bbclass
+│   │   ├── logging.bbclass
+│   │   ├── manpages.bbclass
+│   │   ├── mcextend.bbclass
+│   │   ├── meson.bbclass
+│   │   ├── meson-routines.bbclass
+│   │   ├── metadata_scm.bbclass
+│   │   ├── migrate_localcount.bbclass
+│   │   ├── mime.bbclass
+│   │   ├── mime-xdg.bbclass
+│   │   ├── mirrors.bbclass
+│   │   ├── module-base.bbclass
+│   │   ├── module.bbclass
+│   │   ├── multilib.bbclass
+│   │   ├── multilib_global.bbclass
+│   │   ├── multilib_header.bbclass
+│   │   ├── multilib_script.bbclass
+│   │   ├── native.bbclass
+│   │   ├── nativesdk.bbclass
+│   │   ├── nopackages.bbclass
+│   │   ├── npm.bbclass
+│   │   ├── oelint.bbclass
+│   │   ├── overlayfs.bbclass
+│   │   ├── overlayfs-etc.bbclass
+│   │   ├── own-mirrors.bbclass
+│   │   ├── package.bbclass
+│   │   ├── packagedata.bbclass
+│   │   ├── package_deb.bbclass
+│   │   ├── packagegroup.bbclass
+│   │   ├── package_ipk.bbclass
+│   │   ├── package_pkgdata.bbclass
+│   │   ├── package_rpm.bbclass
+│   │   ├── package_tar.bbclass
+│   │   ├── patch.bbclass
+│   │   ├── perlnative.bbclass
+│   │   ├── perl-version.bbclass
+│   │   ├── pixbufcache.bbclass
+│   │   ├── pkgconfig.bbclass
+│   │   ├── populate_sdk_base.bbclass
+│   │   ├── populate_sdk.bbclass
+│   │   ├── populate_sdk_ext.bbclass
+│   │   ├── prexport.bbclass
+│   │   ├── primport.bbclass
+│   │   ├── ptest.bbclass
+│   │   ├── ptest-gnome.bbclass
+│   │   ├── ptest-perl.bbclass
+│   │   ├── pypi.bbclass
+│   │   ├── python3-dir.bbclass
+│   │   ├── python3native.bbclass
+│   │   ├── python3targetconfig.bbclass
+│   │   ├── python_flit_core.bbclass
+│   │   ├── python_pep517.bbclass
+│   │   ├── python_poetry_core.bbclass
+│   │   ├── python_pyo3.bbclass
+│   │   ├── python_setuptools3_rust.bbclass
+│   │   ├── python_setuptools_build_meta.bbclass
+│   │   ├── qemu.bbclass
+│   │   ├── qemuboot.bbclass
+│   │   ├── recipe_sanity.bbclass
+│   │   ├── relative_symlinks.bbclass
+│   │   ├── relocatable.bbclass
+│   │   ├── remove-libtool.bbclass
+│   │   ├── report-error.bbclass
+│   │   ├── rm_work_and_downloads.bbclass
+│   │   ├── rm_work.bbclass
+│   │   ├── rootfs_deb.bbclass
+│   │   ├── rootfsdebugfiles.bbclass
+│   │   ├── rootfs_ipk.bbclass
+│   │   ├── rootfs-postcommands.bbclass
+│   │   ├── rootfs_rpm.bbclass
+│   │   ├── rust.bbclass
+│   │   ├── rust-bin.bbclass
+│   │   ├── rust-common.bbclass
+│   │   ├── sanity.bbclass
+│   │   ├── scons.bbclass
+│   │   ├── setuptools3-base.bbclass
+│   │   ├── setuptools3.bbclass
+│   │   ├── setuptools3_legacy.bbclass
+│   │   ├── sign_ipk.bbclass
+│   │   ├── sign_package_feed.bbclass
+│   │   ├── sign_rpm.bbclass
+│   │   ├── siteconfig.bbclass
+│   │   ├── siteinfo.bbclass
+│   │   ├── sstate.bbclass
+│   │   ├── staging.bbclass
+│   │   ├── syslinux.bbclass
+│   │   ├── systemd.bbclass
+│   │   ├── systemd-boot.bbclass
+│   │   ├── systemd-boot-cfg.bbclass
+│   │   ├── terminal.bbclass
+│   │   ├── testexport.bbclass
+│   │   ├── testimage.bbclass
+│   │   ├── testsdk.bbclass
+│   │   ├── texinfo.bbclass
+│   │   ├── toaster.bbclass
+│   │   ├── toolchain-scripts-base.bbclass
+│   │   ├── toolchain-scripts.bbclass
+│   │   ├── typecheck.bbclass
+│   │   ├── uboot-config.bbclass
+│   │   ├── uboot-extlinux-config.bbclass
+│   │   ├── uboot-sign.bbclass
+│   │   ├── uninative.bbclass
+│   │   ├── update-alternatives.bbclass
+│   │   ├── update-rc.d.bbclass
+│   │   ├── upstream-version-is-even.bbclass
+│   │   ├── useradd_base.bbclass
+│   │   ├── useradd.bbclass
+│   │   ├── useradd-staticids.bbclass
+│   │   ├── utility-tasks.bbclass
+│   │   ├── utils.bbclass
+│   │   ├── vala.bbclass
+│   │   ├── waf.bbclass
+│   │   ├── xmlcatalog.bbclass
+│   │   └── yocto-check-layer.bbclass
+│   ├── conf
+│   │   ├── abi_version.conf
+│   │   ├── bitbake.conf
+│   │   ├── ccache.conf
+│   │   ├── conf-notes.txt
+│   │   ├── distro
+│   │   ├── documentation.conf
+│   │   ├── image-uefi.conf
+│   │   ├── layer.conf
+│   │   ├── licenses.conf
+│   │   ├── machine
+│   │   ├── machine-sdk
+│   │   ├── migrate_localcount.conf
+│   │   ├── multiconfig
+│   │   ├── multilib.conf
+│   │   ├── prexport.conf
+│   │   ├── primport.conf
+│   │   └── sanity.conf
+│   ├── COPYING.MIT
+│   ├── files
+│   │   ├── common-licenses
+│   │   ├── device_table-minimal.txt
+│   │   ├── ext-sdk-prepare.py
+│   │   ├── fs-perms-persistent-log.txt
+│   │   ├── fs-perms.txt
+│   │   ├── overlayfs-all-overlays.service.in
+│   │   ├── overlayfs-create-dirs.service.in
+│   │   ├── overlayfs-etc-preinit.sh.in
+│   │   ├── overlayfs-unit.mount.in
+│   │   ├── ptest-perl
+│   │   ├── spdx-licenses.json
+│   │   ├── toolchain-shar-extract.sh
+│   │   └── toolchain-shar-relocate.sh
+│   ├── lib
+│   │   ├── bblayers
+│   │   ├── buildstats.py
+│   │   ├── oe
+│   │   ├── oeqa
+│   │   ├── __pycache__
+│   │   └── rootfspostcommands.py
+│   ├── recipes-bsp
+│   │   ├── acpid
+│   │   ├── alsa-state
+│   │   ├── apmd
+│   │   ├── efibootmgr
+│   │   ├── efivar
+│   │   ├── formfactor
+│   │   ├── gnu-efi
+│   │   ├── grub
+│   │   ├── keymaps
+│   │   ├── libacpi
+│   │   ├── lrzsz
+│   │   ├── opensbi
+│   │   ├── pciutils
+│   │   ├── pm-utils
+│   │   ├── setserial
+│   │   ├── u-boot
+│   │   ├── usbinit
+│   │   ├── usbutils
+│   │   └── v86d
+│   ├── recipes-connectivity
+│   │   ├── avahi
+│   │   ├── bind
+│   │   ├── bluez5
+│   │   ├── connman
+│   │   ├── dhcpcd
+│   │   ├── inetutils
+│   │   ├── iproute2
+│   │   ├── iw
+│   │   ├── kea
+│   │   ├── libnss-mdns
+│   │   ├── libpcap
+│   │   ├── libuv
+│   │   ├── mobile-broadband-provider-info
+│   │   ├── neard
+│   │   ├── nfs-utils
+│   │   ├── ofono
+│   │   ├── openssh
+│   │   ├── openssl
+│   │   ├── ppp
+│   │   ├── ppp-dialin
+│   │   ├── resolvconf
+│   │   ├── socat
+│   │   ├── ssh-pregen-hostkeys
+│   │   └── wpa-supplicant
+│   ├── recipes-core
+│   │   ├── base-files
+│   │   ├── base-passwd
+│   │   ├── busybox
+│   │   ├── coreutils
+│   │   ├── dbus
+│   │   ├── dbus-wait
+│   │   ├── dropbear
+│   │   ├── ell
+│   │   ├── expat
+│   │   ├── fts
+│   │   ├── gettext
+│   │   ├── glib-2.0
+│   │   ├── glibc
+│   │   ├── glib-networking
+│   │   ├── ifupdown
+│   │   ├── images
+│   │   ├── init-ifupdown
+│   │   ├── initrdscripts
+│   │   ├── initscripts
+│   │   ├── kbd
+│   │   ├── libcgroup
+│   │   ├── libxcrypt
+│   │   ├── libxml
+│   │   ├── meta
+│   │   ├── musl
+│   │   ├── ncurses
+│   │   ├── netbase
+│   │   ├── newlib
+│   │   ├── os-release
+│   │   ├── ovmf
+│   │   ├── packagegroups
+│   │   ├── psplash
+│   │   ├── readline
+│   │   ├── seatd
+│   │   ├── sysfsutils
+│   │   ├── systemd
+│   │   ├── sysvinit
+│   │   ├── udev
+│   │   ├── update-rc.d
+│   │   ├── util-linux
+│   │   ├── volatile-binds
+│   │   └── zlib
+│   ├── recipes-devtools
+│   │   ├── apt
+│   │   ├── autoconf
+│   │   ├── autoconf-archive
+│   │   ├── automake
+│   │   ├── binutils
+│   │   ├── bison
+│   │   ├── bootchart2
+│   │   ├── btrfs-tools
+│   │   ├── cargo
+│   │   ├── ccache
+│   │   ├── cdrtools
+│   │   ├── chrpath
+│   │   ├── cmake
+│   │   ├── createrepo-c
+│   │   ├── dejagnu
+│   │   ├── desktop-file-utils
+│   │   ├── devel-config
+│   │   ├── diffstat
+│   │   ├── distcc
+│   │   ├── dmidecode
+│   │   ├── dnf
+│   │   ├── docbook-xml
+│   │   ├── dosfstools
+│   │   ├── dpkg
+│   │   ├── dwarfsrcfiles
+│   │   ├── e2fsprogs
+│   │   ├── elfutils
+│   │   ├── erofs-utils
+│   │   ├── expect
+│   │   ├── fdisk
+│   │   ├── file
+│   │   ├── flex
+│   │   ├── gcc
+│   │   ├── gdb
+│   │   ├── git
+│   │   ├── glide
+│   │   ├── gnu-config
+│   │   ├── go
+│   │   ├── help2man
+│   │   ├── i2c-tools
+│   │   ├── icecc-create-env
+│   │   ├── icecc-toolchain
+│   │   ├── intltool
+│   │   ├── jquery
+│   │   ├── json-c
+│   │   ├── libcomps
+│   │   ├── libdnf
+│   │   ├── libedit
+│   │   ├── libmodulemd
+│   │   ├── librepo
+│   │   ├── libtool
+│   │   ├── llvm
+│   │   ├── log4cplus
+│   │   ├── lua
+│   │   ├── m4
+│   │   ├── make
+│   │   ├── makedevs
+│   │   ├── meson
+│   │   ├── mmc
+│   │   ├── mtd
+│   │   ├── mtools
+│   │   ├── nasm
+│   │   ├── ninja
+│   │   ├── opkg
+│   │   ├── opkg-utils
+│   │   ├── orc
+│   │   ├── patch
+│   │   ├── patchelf
+│   │   ├── perl
+│   │   ├── perl-cross
+│   │   ├── pkgconf
+│   │   ├── pkgconfig
+│   │   ├── pseudo
+│   │   ├── python
+│   │   ├── qemu
+│   │   ├── quilt
+│   │   ├── repo
+│   │   ├── rpm
+│   │   ├── rsync
+│   │   ├── ruby
+│   │   ├── run-postinsts
+│   │   ├── rust
+│   │   ├── squashfs-tools
+│   │   ├── strace
+│   │   ├── subversion
+│   │   ├── swig
+│   │   ├── syslinux
+│   │   ├── systemd-bootchart
+│   │   ├── tcf-agent
+│   │   ├── tcltk
+│   │   ├── unfs3
+│   │   ├── unifdef
+│   │   ├── vala
+│   │   ├── valgrind
+│   │   └── xmlto
+│   ├── recipes-example
+│   │   └── rust-hello-world
+│   ├── recipes-extended
+│   │   ├── acpica
+│   │   ├── asciidoc
+│   │   ├── at
+│   │   ├── bash
+│   │   ├── bc
+│   │   ├── blktool
+│   │   ├── bzip2
+│   │   ├── cpio
+│   │   ├── cracklib
+│   │   ├── cronie
+│   │   ├── cups
+│   │   ├── cwautomacros
+│   │   ├── diffutils
+│   │   ├── ed
+│   │   ├── ethtool
+│   │   ├── findutils
+│   │   ├── gawk
+│   │   ├── ghostscript
+│   │   ├── go-examples
+│   │   ├── gperf
+│   │   ├── grep
+│   │   ├── groff
+│   │   ├── gzip
+│   │   ├── hdparm
+│   │   ├── images
+│   │   ├── iptables
+│   │   ├── iputils
+│   │   ├── less
+│   │   ├── libaio
+│   │   ├── libarchive
+│   │   ├── libidn
+│   │   ├── libmnl
+│   │   ├── libnsl
+│   │   ├── libnss-nis
+│   │   ├── libpipeline
+│   │   ├── libsolv
+│   │   ├── libtirpc
+│   │   ├── lighttpd
+│   │   ├── logrotate
+│   │   ├── lsb
+│   │   ├── lsof
+│   │   ├── ltp
+│   │   ├── lzip
+│   │   ├── man-db
+│   │   ├── man-pages
+│   │   ├── mc
+│   │   ├── mdadm
+│   │   ├── mingetty
+│   │   ├── minicom
+│   │   ├── msmtp
+│   │   ├── net-tools
+│   │   ├── newt
+│   │   ├── packagegroups
+│   │   ├── pam
+│   │   ├── parted
+│   │   ├── pbzip2
+│   │   ├── perl
+│   │   ├── pigz
+│   │   ├── procps
+│   │   ├── psmisc
+│   │   ├── quota
+│   │   ├── rpcbind
+│   │   ├── rpcsvc-proto
+│   │   ├── screen
+│   │   ├── sed
+│   │   ├── shadow
+│   │   ├── slang
+│   │   ├── stress-ng
+│   │   ├── sudo
+│   │   ├── sysklogd
+│   │   ├── sysstat
+│   │   ├── tar
+│   │   ├── tcp-wrappers
+│   │   ├── texinfo
+│   │   ├── texinfo-dummy-native
+│   │   ├── time
+│   │   ├── timezone
+│   │   ├── unzip
+│   │   ├── watchdog
+│   │   ├── wget
+│   │   ├── which
+│   │   ├── xdg-utils
+│   │   ├── xinetd
+│   │   ├── xz
+│   │   ├── zip
+│   │   └── zstd
+│   ├── recipes-gnome
+│   │   ├── epiphany
+│   │   ├── gcr
+│   │   ├── gdk-pixbuf
+│   │   ├── gi-docgen
+│   │   ├── gnome
+│   │   ├── gobject-introspection
+│   │   ├── gsettings-desktop-schemas
+│   │   ├── gtk+
+│   │   ├── gtk-doc
+│   │   ├── hicolor-icon-theme
+│   │   ├── json-glib
+│   │   ├── libdazzle
+│   │   ├── libgudev
+│   │   ├── libhandy
+│   │   ├── libnotify
+│   │   ├── librsvg
+│   │   └── libsecret
+│   ├── recipes-graphics
+│   │   ├── builder
+│   │   ├── cairo
+│   │   ├── cantarell-fonts
+│   │   ├── drm
+│   │   ├── fontconfig
+│   │   ├── freetype
+│   │   ├── glew
+│   │   ├── glslang
+│   │   ├── harfbuzz
+│   │   ├── igt-gpu-tools
+│   │   ├── images
+│   │   ├── jpeg
+│   │   ├── kmscube
+│   │   ├── libepoxy
+│   │   ├── libfakekey
+│   │   ├── libmatchbox
+│   │   ├── libsdl2
+│   │   ├── libva
+│   │   ├── matchbox-session
+│   │   ├── matchbox-wm
+│   │   ├── menu-cache
+│   │   ├── mesa
+│   │   ├── mini-x-session
+│   │   ├── packagegroups
+│   │   ├── pango
+│   │   ├── piglit
+│   │   ├── pong-clock
+│   │   ├── shaderc
+│   │   ├── spir
+│   │   ├── startup-notification
+│   │   ├── ttf-fonts
+│   │   ├── virglrenderer
+│   │   ├── vulkan
+│   │   ├── waffle
+│   │   ├── wayland
+│   │   ├── x11-common
+│   │   ├── xcursor-transparent-theme
+│   │   ├── xinput-calibrator
+│   │   ├── xorg-app
+│   │   ├── xorg-driver
+│   │   ├── xorg-font
+│   │   ├── xorg-lib
+│   │   ├── xorg-proto
+│   │   ├── xorg-util
+│   │   ├── xorg-xserver
+│   │   ├── xrestop
+│   │   └── xwayland
+│   ├── recipes-kernel
+│   │   ├── blktrace
+│   │   ├── cryptodev
+│   │   ├── dtc
+│   │   ├── kern-tools
+│   │   ├── kexec
+│   │   ├── kmod
+│   │   ├── linux
+│   │   ├── linux-firmware
+│   │   ├── linux-libc-headers
+│   │   ├── lttng
+│   │   ├── make-mod-scripts
+│   │   ├── modutils-initscripts
+│   │   ├── perf
+│   │   ├── powertop
+│   │   ├── systemtap
+│   │   └── wireless-regdb
+│   ├── recipes-multimedia
+│   │   ├── alsa
+│   │   ├── ffmpeg
+│   │   ├── flac
+│   │   ├── gstreamer
+│   │   ├── lame
+│   │   ├── liba52
+│   │   ├── libogg
+│   │   ├── libomxil
+│   │   ├── libpng
+│   │   ├── libsamplerate
+│   │   ├── libsndfile
+│   │   ├── libtheora
+│   │   ├── libtiff
+│   │   ├── libvorbis
+│   │   ├── mpeg2dec
+│   │   ├── mpg123
+│   │   ├── pulseaudio
+│   │   ├── sbc
+│   │   ├── speex
+│   │   ├── webp
+│   │   └── x264
+│   ├── recipes-rt
+│   │   ├── images
+│   │   ├── README
+│   │   └── rt-tests
+│   ├── recipes-sato
+│   │   ├── images
+│   │   ├── l3afpad
+│   │   ├── libptytty
+│   │   ├── matchbox-config-gtk
+│   │   ├── matchbox-desktop
+│   │   ├── matchbox-keyboard
+│   │   ├── matchbox-panel-2
+│   │   ├── matchbox-sato
+│   │   ├── matchbox-terminal
+│   │   ├── matchbox-theme-sato
+│   │   ├── packagegroups
+│   │   ├── pcmanfm
+│   │   ├── pulseaudio-sato
+│   │   ├── puzzles
+│   │   ├── rxvt-unicode
+│   │   ├── sato-screenshot
+│   │   ├── settings-daemon
+│   │   ├── shutdown-desktop
+│   │   └── webkit
+│   ├── recipes-support
+│   │   ├── apr
+│   │   ├── argp-standalone
+│   │   ├── aspell
+│   │   ├── atk
+│   │   ├── attr
+│   │   ├── bash-completion
+│   │   ├── bmap-tools
+│   │   ├── boost
+│   │   ├── ca-certificates
+│   │   ├── consolekit
+│   │   ├── curl
+│   │   ├── db
+│   │   ├── debianutils
+│   │   ├── diffoscope
+│   │   ├── dos2unix
+│   │   ├── enchant
+│   │   ├── fribidi
+│   │   ├── gdbm
+│   │   ├── gmp
+│   │   ├── gnome-desktop-testing
+│   │   ├── gnupg
+│   │   ├── gnutls
+│   │   ├── gpgme
+│   │   ├── icu
+│   │   ├── iso-codes
+│   │   ├── itstool
+│   │   ├── libassuan
+│   │   ├── libatomic-ops
+│   │   ├── libbsd
+│   │   ├── libcap
+│   │   ├── libcap-ng
+│   │   ├── libcheck
+│   │   ├── libcroco
+│   │   ├── libdaemon
+│   │   ├── libevdev
+│   │   ├── libevent
+│   │   ├── libexif
+│   │   ├── libffi
+│   │   ├── libfm
+│   │   ├── libgcrypt
+│   │   ├── libgit2
+│   │   ├── libgpg-error
+│   │   ├── libical
+│   │   ├── libjitterentropy
+│   │   ├── libksba
+│   │   ├── libmd
+│   │   ├── libmicrohttpd
+│   │   ├── libmpc
+│   │   ├── libnl
+│   │   ├── libpcre
+│   │   ├── libproxy
+│   │   ├── libpsl
+│   │   ├── libseccomp
+│   │   ├── libsoup
+│   │   ├── libssh2
+│   │   ├── libunistring
+│   │   ├── libunwind
+│   │   ├── liburcu
+│   │   ├── libusb
+│   │   ├── libxslt
+│   │   ├── libyaml
+│   │   ├── lz4
+│   │   ├── lzo
+│   │   ├── lzop
+│   │   ├── mpfr
+│   │   ├── nettle
+│   │   ├── nghttp2
+│   │   ├── npth
+│   │   ├── nss-myhostname
+│   │   ├── numactl
+│   │   ├── p11-kit
+│   │   ├── pinentry
+│   │   ├── popt
+│   │   ├── ptest-runner
+│   │   ├── re2c
+│   │   ├── rng-tools
+│   │   ├── serf
+│   │   ├── shared-mime-info
+│   │   ├── sqlite
+│   │   ├── taglib
+│   │   ├── user-creation
+│   │   ├── vim
+│   │   ├── vte
+│   │   └── xxhash
+│   ├── recipes.txt
+│   └── site
+│       ├── arc-common
+│       ├── arm-32
+│       ├── arm-64
+│       ├── arm-common
+│       ├── arm-darwin
+│       ├── arm-darwin8
+│       ├── armeb-linux
+│       ├── arm-linux
+│       ├── common
+│       ├── common-darwin
+│       ├── common-glibc
+│       ├── common-linux
+│       ├── common-mingw
+│       ├── common-musl
+│       ├── endian-big
+│       ├── endian-little
+│       ├── ix86-common
+│       ├── microblaze-linux
+│       ├── mips64el-linux
+│       ├── mips64-linux
+│       ├── mips-common
+│       ├── mipsel-linux
+│       ├── mipsisa32r6el-linux
+│       ├── mipsisa32r6-linux
+│       ├── mipsisa64r6el-linux
+│       ├── mipsisa64r6-linux
+│       ├── mips-linux
+│       ├── native
+│       ├── nios2-linux
+│       ├── powerpc32-linux
+│       ├── powerpc32-linux-glibc
+│       ├── powerpc32-linux-musl
+│       ├── powerpc64-linux
+│       ├── powerpc64-linux-glibc
+│       ├── powerpc64-linux-musl
+│       ├── powerpc-common
+│       ├── powerpc-darwin
+│       ├── powerpc-linux
+│       ├── riscv32-linux
+│       ├── riscv64-linux
+│       ├── sh-common
+│       ├── sparc-linux
+│       ├── x32-linux
+│       └── x86_64-linux
+├── meta-poky
+│   ├── classes
+│   │   └── poky-sanity.bbclass
+│   ├── conf
+│   │   ├── bblayers.conf.sample
+│   │   ├── conf-notes.txt
+│   │   ├── distro
+│   │   ├── layer.conf
+│   │   ├── local.conf.sample
+│   │   ├── local.conf.sample.extended
+│   │   └── site.conf.sample
+│   ├── README.poky.md
+│   └── recipes-core
+│       ├── busybox
+│       ├── psplash
+│       └── tiny-init
+├── meta-selftest
+│   ├── classes
+│   │   ├── test_events.bbclass
+│   │   └── test-mkimage-wrapper.bbclass
+│   ├── conf
+│   │   ├── layer.conf
+│   │   └── machine
+│   ├── files
+│   │   ├── signing
+│   │   ├── static-group
+│   │   └── static-passwd
+│   ├── lib
+│   │   ├── devtool
+│   │   ├── oeqa
+│   │   ├── pseudo_pyc_test1.py
+│   │   ├── pseudo_pyc_test2.py
+│   │   └── recipetool
+│   ├── README
+│   ├── recipes-devtools
+│   │   └── python
+│   ├── recipes-test
+│   │   ├── aspell
+│   │   ├── base-files
+│   │   ├── container-image
+│   │   ├── delay
+│   │   ├── devtool
+│   │   ├── emptytest
+│   │   ├── error
+│   │   ├── fortran
+│   │   ├── gitrepotest
+│   │   ├── git-submodule-test
+│   │   ├── gitunpackoffline
+│   │   ├── images
+│   │   ├── license
+│   │   ├── logging-test
+│   │   ├── m4
+│   │   ├── man-db
+│   │   ├── multiconfig
+│   │   ├── nopackages
+│   │   ├── overlayfs-user
+│   │   ├── poison
+│   │   ├── postinst
+│   │   ├── pseudo-pyc-test
+│   │   ├── recipetool
+│   │   ├── recipeutils
+│   │   ├── selftest-chown
+│   │   ├── selftest-ed
+│   │   ├── selftest-hardlink
+│   │   ├── sysroot-test
+│   │   ├── systemd-machine-units
+│   │   └── xcursor-transparent-theme
+│   └── wic
+│       ├── overlayfs_etc.wks.in
+│       ├── test_biosplusefi_plugin.wks
+│       ├── test_efi_plugin.wks
+│       ├── test_empty_plugin.wks
+│       ├── test_rawcopy_plugin.wks.in
+│       └── wictestdisk.wks
+├── meta-skeleton
+│   ├── conf
+│   │   ├── layer.conf
+│   │   ├── multilib-example2.conf
+│   │   └── multilib-example.conf
+│   ├── README.skeleton
+│   ├── recipes-baremetal
+│   │   └── baremetal-examples
+│   ├── recipes-core
+│   │   └── busybox
+│   ├── recipes-kernel
+│   │   ├── hello-mod
+│   │   └── linux
+│   ├── recipes-multilib
+│   │   └── images
+│   └── recipes-skeleton
+│       ├── hello-autotools
+│       ├── hello-single
+│       ├── libxpm
+│       ├── service
+│       └── useradd
+├── meta-yocto-bsp
+│   ├── conf
+│   │   ├── layer.conf
+│   │   └── machine
+│   ├── lib
+│   │   └── oeqa
+│   ├── README.hardware.md
+│   ├── recipes-bsp
+│   │   ├── formfactor
+│   │   └── gma500-gfx-check
+│   ├── recipes-graphics
+│   │   └── xorg-xserver
+│   ├── recipes-kernel
+│   │   └── linux
+│   └── wic
+│       ├── beaglebone-yocto.wks
+│       ├── edgerouter.wks
+│       └── genericx86.wks.in
+├── oe-init-build-env
+├── README.hardware.md -> meta-yocto-bsp/README.hardware.md
+├── README.md -> README.poky.md
+├── README.OE-Core.md
+├── README.poky.md -> meta-poky/README.poky.md
+├── README.qemu.md
+└── scripts
+    ├── autobuilder-worker-prereq-tests
+    ├── bitbake-prserv-tool
+    ├── bitbake-whatchanged
+    ├── buildall-qemu
+    ├── buildhistory-collect-srcrevs
+    ├── buildhistory-diff
+    ├── buildstats-diff
+    ├── combo-layer
+    ├── combo-layer.conf.example
+    ├── combo-layer-hook-default.sh
+    ├── contrib
+    │   ├── bb-perf
+    │   ├── bbvars.py
+    │   ├── build-perf-test-wrapper.sh
+    │   ├── convert-overrides.py
+    │   ├── convert-spdx-licenses.py
+    │   ├── convert-srcuri.py
+    │   ├── convert-variable-renames.py
+    │   ├── ddimage
+    │   ├── devtool-stress.py
+    │   ├── dialog-power-control
+    │   ├── documentation-audit.sh
+    │   ├── graph-tool
+    │   ├── image-manifest
+    │   ├── list-packageconfig-flags.py
+    │   ├── oe-build-perf-report-email.py
+    │   ├── patchreview.py
+    │   ├── patchtest.sh
+    │   ├── serdevtry
+    │   ├── test_build_time.sh
+    │   ├── test_build_time_worker.sh
+    │   ├── uncovered
+    │   └── verify-homepage.py
+    ├── cp-noerror
+    ├── create-pull-request
+    ├── cross-intercept
+    │   └── ar -> ../native-intercept/ar
+    ├── crosstap
+    ├── devtool
+    ├── gen-lockedsig-cache
+    ├── gen-site-config
+    ├── git
+    ├── install-buildtools
+    ├── lib
+    │   ├── argparse_oe.py
+    │   ├── build_perf
+    │   ├── buildstats.py
+    │   ├── checklayer
+    │   ├── devtool
+    │   ├── recipetool
+    │   ├── resulttool
+    │   ├── scriptpath.py
+    │   ├── scriptutils.py
+    │   └── wic
+    ├── multilib_header_wrapper.h
+    ├── native-intercept
+    │   ├── ar
+    │   ├── chgrp
+    │   └── chown
+    ├── nativesdk-intercept
+    │   ├── chgrp
+    │   └── chown
+    ├── oe-buildenv-internal
+    ├── oe-build-perf-report
+    ├── oe-build-perf-test
+    ├── oe-check-sstate
+    ├── oe-debuginfod
+    ├── oe-depends-dot
+    ├── oe-find-native-sysroot
+    ├── oe-git-archive
+    ├── oe-git-proxy
+    ├── oe-gnome-terminal-phonehome
+    ├── oe-pkgdata-browser
+    ├── oe-pkgdata-browser.glade
+    ├── oe-pkgdata-util
+    ├── oe-publish-sdk
+    ├── oepydevshell-internal.py
+    ├── oe-pylint
+    ├── oe-run-native
+    ├── oe-selftest
+    ├── oe-setup-builddir
+    ├── oe-test
+    ├── oe-time-dd-test.sh
+    ├── oe-trim-schemas
+    ├── opkg-query-helper.py
+    ├── postinst-intercepts
+    │   ├── delay_to_first_boot
+    │   ├── postinst_intercept
+    │   ├── update_desktop_database
+    │   ├── update_font_cache
+    │   ├── update_gio_module_cache
+    │   ├── update_gtk_icon_cache
+    │   ├── update_gtk_immodules_cache
+    │   ├── update_mime_database
+    │   ├── update_pixbuf_cache
+    │   └── update_udev_hwdb
+    ├── pybootchartgui
+    │   ├── AUTHORS
+    │   ├── COPYING
+    │   ├── MAINTAINERS
+    │   ├── NEWS
+    │   ├── pybootchartgui
+    │   ├── pybootchartgui.py
+    │   └── README.pybootchart
+    ├── pythondeps
+    ├── README
+    ├── recipetool
+    ├── relocate_sdk.py
+    ├── resulttool
+    ├── rootfs_rpm-extract-postinst.awk
+    ├── rpm2cpio.sh
+    ├── runqemu
+    ├── runqemu-addptable2image
+    ├── runqemu-export-rootfs
+    ├── runqemu-extract-sdk
+    ├── runqemu-gen-tapdevs
+    ├── runqemu-ifdown
+    ├── runqemu-ifup
+    ├── runqemu.README
+    ├── send-error-report
+    ├── send-pull-request
+    ├── sstate-cache-management.sh
+    ├── sstate-diff-machines.sh
+    ├── sstate-sysroot-cruft.sh
+    ├── sysroot-relativelinks.py
+    ├── task-time
+    ├── test-reexec
+    ├── test-remote-image
+    ├── tiny
+    │   ├── dirsize.py
+    │   ├── ksize.py
+    │   └── ksum.py
+    ├── verify-bashisms
+    ├── wic
+    ├── yocto-check-layer
+    └── yocto-check-layer-wrapper
+
+680 directories, 620 files
